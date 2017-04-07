@@ -58,8 +58,8 @@ public class Authentication extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                mProgressDialog.setTitle("Signing Up...");
-                mProgressDialog.show();
+               // mProgressDialog.setTitle("Signing Up...");
+                mProgressDialog.show(Authentication.this,"Signing Up....","Processing....",true);
 
                 final String name = mNameEditText.getText().toString().trim();
                 final String mobileNo = mMobileNoEditText.getText().toString().trim();
@@ -89,8 +89,7 @@ public class Authentication extends AppCompatActivity {
                                         mEditor.commit();
                                         Toast.makeText(Authentication.this, "Logged in", Toast.LENGTH_SHORT).show();
                                         startActivity(i);
-                                     //  startActivity(new Intent(Authentication.this,ProfileActivity.class));
-                                        // startActivity(new Intent(Authentication.this,MainActivity.class));
+
                                         finish();
                                     }
                                     if(mProgressDialog != null)
@@ -108,8 +107,8 @@ public class Authentication extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                mProgressDialog.setTitle("Signing In...");
-                mProgressDialog.show();
+               // mProgressDialog.setTitle("Signing In...");
+                mProgressDialog.show(Authentication.this,"Signing In....","Processing....",true);
 
                 final String name = mNameEditText.getText().toString().trim();
                 final String mobileNo = mMobileNoEditText.getText().toString().trim();
@@ -128,6 +127,7 @@ public class Authentication extends AppCompatActivity {
                                     }else{
                                         //user exists
                                         mDatabaseReference.child("users").child(mobileNo).child("name").setValue(name);
+
                                         mEditor.clear();
                                         mEditor.putString(KEY_MOBILE_NUMBER, mobileNo);
                                         mEditor.putString(KEY_NAME,name);

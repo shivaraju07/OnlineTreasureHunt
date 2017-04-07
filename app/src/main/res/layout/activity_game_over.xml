@@ -12,16 +12,36 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="205dp"
+        android:layout_marginTop="58dp"
         android:text="GAME OVER"
-        android:textSize="30sp" />
+        android:textSize="36sp" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="logout"
+        android:text="LOGOUT"
+        android:layout_below="@+id/finalScore"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="69dp" />
+
+    <TextView
+        android:id="@+id/finalScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score"
+        android:textSize="24sp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Score"
+        android:textSize="36sp"
         android:layout_below="@+id/game_over"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="92dp"
-        android:text="LOGOUT" />
+        android:layout_marginTop="48dp" />
 </RelativeLayout>
