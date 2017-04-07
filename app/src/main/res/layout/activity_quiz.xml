@@ -3,8 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_quiz"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="6dp"
+    android:weightSum="1">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -31,12 +33,12 @@
             android:id="@+id/timer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_centerVertical="true"
-            android:textSize="30sp"
-            android:layout_marginStart="96dp"
             android:layout_centerHorizontal="true"
-            android:layout_toEndOf="@+id/score_text" />
+            android:layout_centerVertical="true"
+            android:layout_marginStart="96dp"
+            android:layout_toEndOf="@+id/score_text"
+            android:gravity="center"
+            android:textSize="30sp" />
 
     </RelativeLayout>
 
@@ -84,6 +86,7 @@
         android:id="@+id/quit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="24sp"
         android:layout_marginBottom="24dp"
         android:background="#B71C1C"
         android:onClick="showMap"
